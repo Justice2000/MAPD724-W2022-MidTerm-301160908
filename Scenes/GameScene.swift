@@ -26,7 +26,8 @@ class GameScene: SKScene
         
         // add ocean to the scene
         ocean = Ocean() // allocate memory
-        ocean?.position = CGPoint(x: 0, y: 773)
+        ocean?.position = CGPoint(x: 733, y: 0)
+        ocean?.zRotation = .pi / 2
         addChild(ocean!) // add the ocean to the scene
         
         // add island to the scene
@@ -35,11 +36,12 @@ class GameScene: SKScene
         
         // add plane to the scene
         plane = Plane()
-        plane?.position = CGPoint(x: 0, y: -495)
+        plane?.position = CGPoint(x: -600, y: 0)
+        plane?.zRotation = 3 * .pi / 2
         addChild(plane!)
         
-        // add 3 clouds to the scene
-        for index in 0...2
+        // add 2 clouds to the scene
+        for index in 0...1
         {
             let cloud: Cloud = Cloud()
             clouds.append(cloud)
@@ -72,20 +74,19 @@ class GameScene: SKScene
     
     func touchDown(atPoint pos : CGPoint)
     {
-        plane?.TouchMove(newPos: CGPoint(x: pos.x, y: -495))
+        plane?.TouchMove(newPos: CGPoint(x: -600, y: pos.y))
     }
     
     func touchMoved(toPoint pos : CGPoint)
     {
-        plane?.TouchMove(newPos: CGPoint(x: pos.x, y: -495))
+        plane?.TouchMove(newPos: CGPoint(x: -600, y: pos.y))
     }
     
     func touchUp(atPoint pos : CGPoint)
     {
-        plane?.TouchMove(newPos: CGPoint(x: pos.x, y: -495))
+        plane?.TouchMove(newPos: CGPoint(x: -600, y: pos.y))
         
     }
-    
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?)
     {
         for t in touches { self.touchDown(atPoint: t.location(in: self)) }
