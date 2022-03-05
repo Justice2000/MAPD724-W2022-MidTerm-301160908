@@ -1,9 +1,16 @@
 //
-//  GameViewController.swift
-//  MAPD724-W2022-ICE1
-//
-//  Created by Tom Tsiliopoulos on 2022-01-12.
-//
+//  ViewController.swift
+//  MAPD724-W2022-MidTerm-301160908
+
+/*
+ *Program Name: MailPilot
+ *Date Last Modified: 04/03/2022
+ *Description: A simple ios game using the Swift Programming Language, SpriteKit and Xcode.
+ *Revision History: Changed orientation of Game scene.
+ *Author: Justice Ekeke
+ *Student ID: 301160908
+ *Date: 05/03/2022.
+*/
 
 import UIKit
 import SpriteKit
