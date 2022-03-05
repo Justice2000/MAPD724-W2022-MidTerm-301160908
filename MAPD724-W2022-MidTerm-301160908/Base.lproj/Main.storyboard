@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BV1-FR-VrT">
+    <device id="retina6_0" orientation="landscape" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Game View Controller-->
+        <scene sceneID="tXr-a1-R10">
+            <objects>
+                <viewController id="BV1-FR-VrT" customClass="GameViewController" customModule="MAPD724_W2022_MidTerm_301160908" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" multipleTouchEnabled="YES" contentMode="scaleToFill" id="3se-qz-xqx" customClass="SKView">
+                        <rect key="frame" x="0.0" y="0.0" width="844" height="390"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GFs-K5-yQW">
+                                <rect key="frame" x="63.999999999999993" y="0.0" width="127.33333333333331" height="45"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="yN8-ta-RAa"/>
+                                </constraints>
+                                <attributedString key="attributedText">
+                                    <fragment content="LivesLabel: 99">
+                                        <attributes>
+                                            <color key="NSColor" red="0.99953407049999998" green="0.98835557699999999" blue="0.47265523669999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <font key="NSFont" metaFont="system" size="20"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6HO-v2-hEO">
+                                <rect key="frame" x="614.33333333333337" y="0.0" width="169.66666666666663" height="45"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="ScoreLabel: 99999">
+                                        <attributes>
+                                            <color key="NSColor" red="0.99953407049999998" green="0.98835557699999999" blue="0.47265523669999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <font key="NSFont" metaFont="system" size="20"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZJn-q8-CsG">
+                                <rect key="frame" x="60" y="227" width="724" height="108"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="Mail Pilot">
+                                        <attributes>
+                                            <color key="NSColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <font key="NSFont" metaFont="system" size="60"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ion-Ff-zLw">
+                                <rect key="frame" x="60" y="-175" width="724" height="108"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="108" id="ATn-yA-FTw"/>
+                                </constraints>
+                                <attributedString key="attributedText">
+                                    <fragment content="GAME OVER">
+                                        <attributes>
+                                            <color key="NSColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <font key="NSFont" metaFont="system" size="60"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F4H-Ju-r1M">
+                                <rect key="frame" x="310" y="158" width="224" height="74"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="restartButton"/>
+                                <connections>
+                                    <action selector="EndButton_Pressed:" destination="BV1-FR-VrT" eventType="touchUpInside" id="56T-Iw-mVO"/>
+                                    <action selector="StartButton_Pressed:" destination="BV1-FR-VrT" eventType="touchUpInside" id="Ch2-CL-B9g"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cAK-OL-ggr">
+                                <rect key="frame" x="310" y="89" width="224" height="74"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="74" id="f01-ny-GHT"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="startButton"/>
+                                <connections>
+                                    <action selector="StartButton_Pressed:" destination="BV1-FR-VrT" eventType="touchUpInside" id="P7u-U1-LLP"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="4qk-I5-YsI"/>
+                        <color key="backgroundColor" systemColor="systemBlueColor"/>
+                        <constraints>
+                            <constraint firstItem="ZJn-q8-CsG" firstAttribute="trailing" secondItem="3se-qz-xqx" secondAttribute="trailingMargin" id="9vk-FB-FQc"/>
+                            <constraint firstItem="cAK-OL-ggr" firstAttribute="top" secondItem="4qk-I5-YsI" secondAttribute="top" constant="89" id="AdX-0w-ZD0"/>
+                            <constraint firstItem="ZJn-q8-CsG" firstAttribute="leading" secondItem="Ion-Ff-zLw" secondAttribute="leading" id="D1C-gy-4v4"/>
+                            <constraint firstItem="ZJn-q8-CsG" firstAttribute="leading" secondItem="3se-qz-xqx" secondAttribute="leadingMargin" id="Gdb-fq-z40"/>
+                            <constraint firstItem="GFs-K5-yQW" firstAttribute="firstBaseline" secondItem="6HO-v2-hEO" secondAttribute="firstBaseline" id="H1N-aB-vIi"/>
+                            <constraint firstItem="F4H-Ju-r1M" firstAttribute="centerX" secondItem="ZJn-q8-CsG" secondAttribute="centerX" id="Mlw-cA-M3A"/>
+                            <constraint firstItem="ZJn-q8-CsG" firstAttribute="trailing" secondItem="Ion-Ff-zLw" secondAttribute="trailing" id="QB4-LC-UQQ"/>
+                            <constraint firstItem="4qk-I5-YsI" firstAttribute="bottom" secondItem="ZJn-q8-CsG" secondAttribute="bottom" constant="34" id="ZYt-Go-W84"/>
+                            <constraint firstItem="GFs-K5-yQW" firstAttribute="top" secondItem="4qk-I5-YsI" secondAttribute="top" id="aOI-vy-PU8"/>
+                            <constraint firstItem="GFs-K5-yQW" firstAttribute="baseline" secondItem="6HO-v2-hEO" secondAttribute="baseline" id="dsx-hn-tS6"/>
+                            <constraint firstItem="cAK-OL-ggr" firstAttribute="leading" secondItem="F4H-Ju-r1M" secondAttribute="leading" id="ezH-YL-CLS"/>
+                            <constraint firstItem="ZJn-q8-CsG" firstAttribute="top" secondItem="cAK-OL-ggr" secondAttribute="bottom" constant="64" id="jwz-8A-NmV"/>
+                            <constraint firstItem="6HO-v2-hEO" firstAttribute="trailing" secondItem="3se-qz-xqx" secondAttribute="trailingMargin" id="lMS-4O-xno"/>
+                            <constraint firstItem="F4H-Ju-r1M" firstAttribute="centerY" secondItem="3se-qz-xqx" secondAttribute="centerY" id="ofu-eq-P05"/>
+                            <constraint firstItem="GFs-K5-yQW" firstAttribute="leading" secondItem="4qk-I5-YsI" secondAttribute="leading" constant="20" id="pbJ-gP-RP0"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="EndButton" destination="F4H-Ju-r1M" id="lY9-Vt-om6"/>
+                        <outlet property="EndLabel" destination="Ion-Ff-zLw" id="ji0-S0-flf"/>
+                        <outlet property="LivesLabel" destination="GFs-K5-yQW" id="Wu4-eF-SnH"/>
+                        <outlet property="ScoreLabel" destination="6HO-v2-hEO" id="E6R-Yr-FGY"/>
+                        <outlet property="StartButton" destination="cAK-OL-ggr" id="6pI-J8-pfp"/>
+                        <outlet property="StartLabel" destination="ZJn-q8-CsG" id="shn-Np-iYA"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SZV-WD-TEh" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="112.30769230769231" y="85.308056872037909"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="restartButton" width="200" height="60"/>
+        <image name="startButton" width="200" height="60"/>
+        <systemColor name="systemBlueColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
