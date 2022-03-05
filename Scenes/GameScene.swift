@@ -26,8 +26,7 @@ class GameScene: SKScene
         
         // add ocean to the scene
         ocean = Ocean() // allocate memory
-        ocean?.position = CGPoint(x: 733, y: 0)
-        ocean?.zRotation = .pi / 2
+        ocean?.position = CGPoint(x: 0, y: 773)
         addChild(ocean!) // add the ocean to the scene
         
         // add island to the scene
@@ -36,12 +35,11 @@ class GameScene: SKScene
         
         // add plane to the scene
         plane = Plane()
-        plane?.position = CGPoint(x: -600, y: 0)
-        plane?.zRotation = 3 * .pi / 2
+        plane?.position = CGPoint(x: 0, y: -495)
         addChild(plane!)
         
-        // add 2 clouds to the scene
-        for index in 0...1
+        // add 3 clouds to the scene
+        for index in 0...2
         {
             let cloud: Cloud = Cloud()
             clouds.append(cloud)
@@ -74,17 +72,17 @@ class GameScene: SKScene
     
     func touchDown(atPoint pos : CGPoint)
     {
-        plane?.TouchMove(newPos: CGPoint(x: -600, y: pos.y))
+        plane?.TouchMove(newPos: CGPoint(x: pos.x, y: -495))
     }
     
     func touchMoved(toPoint pos : CGPoint)
     {
-        plane?.TouchMove(newPos: CGPoint(x: -600, y: pos.y))
+        plane?.TouchMove(newPos: CGPoint(x: pos.x, y: -495))
     }
     
     func touchUp(atPoint pos : CGPoint)
     {
-        plane?.TouchMove(newPos: CGPoint(x: -600, y: pos.y))
+        plane?.TouchMove(newPos: CGPoint(x: pos.x, y: -495))
         
     }
     
